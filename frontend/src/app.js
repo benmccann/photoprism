@@ -66,6 +66,7 @@ const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/
 );
 
 // Initialize language and detect alignment
+Vue.config.performance = process.env.NODE_ENV === "development";
 Vue.config.language = config.values.settings.ui.language;
 Settings.defaultLocale = Vue.config.language.substring(0, 2);
 const languages = options.Languages();
